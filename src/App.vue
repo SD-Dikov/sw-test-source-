@@ -59,9 +59,9 @@ export default {
         .then(response => {
           this.charactersQuantity = response.data.count
           this.characters = response.data.results
-          this.characters.forEach(item => {
-            this.getSpecies(item)
-          })
+          // this.characters.forEach(item => {
+          //   this.getSpecies(item)
+          // })
         })
         /*eslint-disable no-unused-vars*/
         .catch(error => {
@@ -78,9 +78,9 @@ export default {
         .then(response => {
           this.charactersQuantity = response.data.count
           this.characters = response.data.results
-          this.characters.forEach(item => {
-            this.getSpecies(item)
-          })
+          // this.characters.forEach(item => {
+          //   this.getSpecies(item)
+          // })
         })
         /*eslint-disable no-unused-vars*/
         .catch(error => {
@@ -111,16 +111,16 @@ export default {
       this.pageNumber = number
       this.getCharacters()
     },
-    getSpecies(i) {
-      if (i.species[0]) {
-        axios.get(i.species[0])
-          .then(response => {
-            i.species = response.data.name
-          })
-      } else {
-        i.species = 'unknown'
-      }
-    }
+    // getSpecies(i) {
+    //   if (i.species[0]) {
+    //     axios.get(i.species[0])
+    //       .then(response => {
+    //         i.species = response.data.name
+    //       })
+    //   } else {
+    //     i.species = 'unknown'
+    //   }
+    // }
   },
   mounted() {
     this.getCharacters()
